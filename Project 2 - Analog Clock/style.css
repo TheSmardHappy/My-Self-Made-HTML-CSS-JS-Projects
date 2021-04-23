@@ -1,0 +1,211 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; */
+}
+
+body{
+    user-select: none;
+    background-color: #ccc;
+}
+
+/* ------------Utility Class------------ */
+.centerCenter{
+    position: absolute;
+    top: 0%;
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
+    margin: auto;
+}
+.horizontalCenter{
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    margin: auto;
+}
+.verticalCenter{
+    position: absolute;
+    top: 0%;
+    bottom: 0%;
+    margin: auto;
+}
+
+/* ------------Utility Class End------------ */
+.analogClock{
+    position: relative;
+    height: 30vw;
+    width: 30vw;
+    margin: 8% auto 0; 
+    background-color: #ececec;
+    border: 12px solid #403c3c;
+    border-radius: 50%;
+    z-index: 1;
+}
+.dot{
+    position: absolute;
+    z-index: 100;
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    border-radius: 50%;
+    background-image: radial-gradient(ellipse 20px 15px at 50% 0%, #ececec 40%, #5c5c5c 80%) 
+}
+
+/* 
+.hline{
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    height: 2px;
+    background-color: red;
+}
+.vline{
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    width: 2px;
+    height: 100%;
+    background-color: red;
+} */
+
+.whiteSpace{
+    position: absolute;
+    width: 84%;
+    height: 84%;
+    border-radius: 50%;
+    background: #ececec;
+    z-index: 3;
+}
+.whiteSpace1{
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    border-radius: 50%;
+    background: #ececec;
+    z-index: 5;
+}
+.number{
+    font-family: Lato, sans-serif;
+    font-size: 2.3rem;
+ 
+}
+
+#twelve{
+    top: 8%;
+    width: 2.9rem;
+    z-index: 6;
+}
+#three{
+    height: 3rem;
+    right: 10%;
+    z-index: 7;
+}
+#six{
+    bottom: 9%;
+    width: 1.5rem;
+    z-index: 8;
+}
+#nine{
+    height: 3rem;
+    left: 10%;
+    z-index: 9;
+}
+/* 
+.diallines{
+    position: absolute; 
+    top: 0%;
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
+    margin: auto;
+} */
+
+.dails{
+    position: absolute;
+    top: 0%;
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
+    margin: auto;
+    height: 90%;
+    width: 2px;
+    transform-origin: center;
+    background-color: #b3b3b0;
+    z-index: 2;
+}
+.dails:nth-child(5n + 1){
+    width: 4px;
+    height: 95%;
+    z-index: 4;
+}
+
+/* #dail1, #dail7, #dail4, #dail10{
+    margin: auto;
+}
+
+#dail1 , #dail7{
+    left: 0%;
+    right: 0%;
+}
+#dail2{
+    top: 9%;
+    right: 25%;
+}
+#dail3{
+    top: 25%;
+    right:  10%;
+}
+#dail4, #dail10{
+    top: 0%;
+    bottom: 0%;
+}
+
+#dail1{
+    top: 2%;
+}
+#dail4{
+    right: 4%;
+}
+#dail7{
+    bottom: 2%;
+
+}
+#dail10{
+    left: 4%;
+} */
+
+.hrHand{
+    bottom: 50%;
+    width: 4%;
+    height: 25%;
+    transform-origin: bottom; 
+    background: #de367c;
+    /* transform: rotate(6deg); */
+    z-index: 11;
+    border-radius: 50% 50% 10% 10% / 8% 8% 10% 10% ;
+    /* display: none; */
+}
+
+.minHand{
+    bottom: 50%;
+    width: 2.5%;
+    height: 35%;
+    transform-origin: bottom; 
+    /* transform: rotate(170deg); */
+    background: #8a8487;
+    z-index: 11;
+    border-radius: 50% 50% 10% 10% / 8% 8% 10% 10% ;
+}
+
+.secHand{
+    transform-origin: 50% 82%;
+    bottom: 41%;
+    width: 1%;
+    height: 50%;
+    background: #1f8dea;
+    /* transform: rotate(90deg); */
+    z-index: 12;
+    border-radius: 50% 50% 10% 10% / 20% 20% 10% 10% ;   
+    /* display: none; */
+}
