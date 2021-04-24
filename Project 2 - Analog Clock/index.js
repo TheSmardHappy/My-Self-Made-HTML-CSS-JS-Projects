@@ -8,9 +8,9 @@ function currentTiming(){
     secHand = currentDate.getSeconds();
     minHand = currentDate.getMinutes();
     hrHand = currentDate.getHours();
-    document.getElementById('hr').style.transform = `rotate(${hrHand * 30}deg)`;
+    document.getElementById('hr').style.transform = `rotate(${(hrHand * 30) + (1/12 * minHand * 6)}deg)`;
     document.getElementById('sec').style.transform = `rotate(${secHand * 6}deg)`;
-    document.getElementById('min').style.transform = `rotate(${minHand * 3}deg)`;
+    document.getElementById('min').style.transform = `rotate(${minHand * 6}deg)`;
 
 }
 
@@ -24,6 +24,6 @@ let style;
 
 for( i = 0;i <= 60 ; i++ ){
     element = document.getElementsByClassName('dails')[i]
-    deg = i * 3
+    deg = i * 6
     element.style.transform = `rotate(${deg}deg)`;
 };
