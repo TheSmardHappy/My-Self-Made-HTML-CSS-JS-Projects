@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap');
+
+/* Css Reset */
+*{
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+body{
+    overflow: hidden;
+}
+/* Css Reset */
+
+
+
+/* ---Utility classes : Code Begins */
+.posAbs{
+    position: absolute;
+}
+.fontConfig{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+.hzCenter{
+    left: 0px;
+    right: 0px;
+    margin: auto;
+}
+/* ---Utility classes : Code Ends */
+
+
+
+/*********Game Start Screen : Code Begins*********/
+.startingGame{
+    /* display: none; */
+    background-image: url(./images/game-Starting-Background.jpg);
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background-size: cover;
+    background-position-x: right;
+    background-position-y: center;
+}
+.startingGame .textContents h1{
+    position: absolute;
+    font-size: 4vw;
+    text-align: center;
+    width: 100vw;
+    font-family: 'Zen Dots', cursive;
+    margin-top: 20px;
+}
+#infomation{
+    position: absolute;
+    margin: 10vw auto;
+    width: 50vw;
+    height: 15vw;
+    left: 0px;
+    right: 0px;
+    border: 2px solid rgb(255, 255, 255);
+}
+#infomation h2{
+    margin: 4% 0%;
+}
+#userName{
+    color: black;
+    font-size: 150%;
+    width: 50%;
+    height: 20%;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin: auto;
+}
+#startBtn{
+    background-color: black;
+    border: 2px solid white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 150%;
+    font-weight: 100;
+    width: 25%;
+    bottom: 10%;
+}
+#startBtn:active{
+    border: 2px solid black;
+}
+#wolfRoaring{
+    background-image: url(./images/wolf-roaring.gif);
+    background-size: contain;
+    width: 42vw;
+    height: 34.5vw;
+    bottom: 0px;
+}
+#dinoRoaring{
+    background-image: url(./images/dino-roaring.gif);
+    background-size: cover;
+    transform: scaleX(-1);
+    width: 81vw;
+    height: 30vw;
+    bottom: 0px;
+    right: -37vw;
+}
+/*********Game Start Screen : Code Ends*********/
+
+
+
+/*********Game Running Screen : Code Begins*********/
+.runningGame{
+    display: none;
+}
+.gameBackground{
+    background-image: url(./images/game-Running-Background.jpg);
+    height: 100vh;
+    width: 3200px;
+    background-size: contain;
+    background-position-x: right;
+    animation: bodyAni linear 5s infinite;
+}
+
+#fighter{
+    /* background-image: url(./images/cheetah.gif); // if you want Cheetah instead of wolf*/ 
+    background-image: url(./images/wolf-running.gif);
+    filter: drop-shadow(0 0px 15px  crimson);
+    width: 345px;
+    height: 250px;
+    background-position: center bottom;
+    background-size: contain;
+    bottom: -6%;
+    left: 50px;
+}
+
+#obstacle{
+    background-image: url(./images/dino-running.gif);
+    transform: scaleX(-1);
+    filter: drop-shadow(0 0px 15px  rgb(3, 65, 236));
+    width: 378px;
+    height: 314px;
+    background-position: center bottom;
+    background-size: contain;
+    bottom: -8%;
+    right: -20%;
+    animation: obsMoving linear 5s infinite;
+}
+
+.runningGame #playName{
+    position: fixed;
+    border: 2px solid white;
+    padding: 5px;
+    top: 20px;
+    left: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.runningGame #playScore{
+    position: fixed;
+    border: 2px solid white;
+    padding: 5px;
+    top: 20px;
+    right: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.jumpUP{
+    animation: jumpUP linear 2.5s ;
+}
+
+    /* Animation Starts */
+    @keyframes bodyAni{
+        0%{
+            transform: translate(0);
+        }
+        100%{
+            transform: translate(-1760px);
+            /* transform: translate(-1768px); */
+        }
+    }
+
+    @keyframes obsMoving{
+        0%{
+            right: -20%;
+        }
+        100%{
+            right: 120%;
+        }
+    }
+
+    @keyframes jumpUP{
+        0%{
+            bottom: -6%;
+        }
+        50%{
+            bottom: 60%;
+        }
+        100%{
+            bottom: -6%;
+        }
+    }
+    /* Animation Ends */
+
+/*********Game Running Screen : Code Ends*********/
+
+
+
+/*********Game Over Screen : Code Begins*********/
+.endingGame{
+    display: none;
+    background-image: url(./images/game-Starting-Background.jpg);
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background-size: cover;
+    background-position-x: right;
+    background-position-y: center;
+}
+.scremingDino{
+    background-image: url(./images/screaming-dino.gif);
+    margin: auto;
+    width: 75vh;
+    height: 55vh;
+    background-size: cover;
+    bottom: 0px;
+}
+#finalScore{
+    font-family: 'Zen Dots', cursive;
+    width: 100%;
+    text-align: center;
+    font-size: 2.4vw;
+    margin-top: 8%;
+}
+.endingGame h1{
+    font-family: 'Zen Dots', cursive;
+    width: 100%;
+    text-align: center;
+    font-size: 10vw;
+    margin-top: 8%;
+}
+#restartGame{
+    color: black;
+    font-size: 150%;
+    margin-top: 20%;
+    width: 20vw;
+    min-width: 200px;
+    height: 35px;
+}
+/*********Game Over Screen : Code Ends*********/

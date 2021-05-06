@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>iDragon Game</title>
+    <link rel="shortcut icon" href="#">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <!-- Game Start Screen : Code Begins -->
+    <div class="startingGame" id="gameStarting">
+        <div class="textContents">
+            <h1>Welcome To iDragon Game</h1>
+        </div>
+        <div class="info posAbs" id="infomation">
+            <h2 class="fontConfig">Enter Your name</h2>
+            <input type="text" name="" placeholder="Player's Name" class="fontConfig posAbs" id="userName" required>
+            <input type="button" onclick="gameStart()" value="Start Game" class="hzCenter posAbs" id="startBtn">
+        </div>
+        <div class="animalImages">
+            <div class="posAbs" id="wolfRoaring"></div>
+            <!-- <img src="./images/wolf-roaring.gif" class="posAbs" id="wolfRoaring" alt=""> -->
+            <!-- <img src="./images/dino-roaring.gif" class="posAbs" id="dinoRoaring" alt=""> -->
+            <div class="posAbs" id="dinoRoaring"></div>
+        </div>
+    </div>
+    <!-- Game Start Screen : Code Ends -->
+
+
+    <!-- Game Running Screen : Code Begins -->
+    <div class="runningGame" id="gameRunning">
+        <div class="gameBackground"></div>
+        <div class="posAbs" id="fighter"></div>
+        <div class="posAbs" id="obstacle"></div>
+        <h3 id="playName">Player's Name: <span id="playerName"></span></h3>
+        <h3 id="playScore">score: <span id="playerScore">0</span></h3>
+    </div>
+    <!-- Game Running Screen : Code Ends -->
+
+
+    <!-- Game Over Screen : Code Begins -->
+    <div id="endingGame"class="endingGame">
+        <h2 class="posAbs" id="finalScore">Your Score Is : <span id="overallScore">0</span></h2>
+        <h1 class="posAbs">Game Over</h1>
+        <div class="scremingDino hzCenter posAbs"></div>
+        <input onclick="location.reload()" id="restartGame" class="posAbs hzCenter" type="button" value="Restart Game">
+    </div>
+    <!-- Game Over Screen : Code Ends -->
+
+
+    <!-- 
+        **********************Disclaimer**********************
+     -->
+</body>
+<script type="text/javascript" src="./index.js"></script>    
+</html>
