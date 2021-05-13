@@ -72,13 +72,13 @@ body{
 
 @keyframes bodyShake{
     0%{
-        transform: translateY(120px);
+        transform: translateY(-100px);
     }
     50%{
-        transform: translateY(200px);
+        transform: translateY(0px);
     }
     100%{
-        transform: translateY(120px);
+        transform: translateY(-100px);
     }
 }
 /* ----------------Animations End--------------------- */
